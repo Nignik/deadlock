@@ -1,0 +1,884 @@
+{
+    "Basic Magazine": {
+        "category": "Weapon",
+        "magazine size": "+24%",
+        "weapon damage": "+15%"
+    },
+    "Close Quarters": {
+        "category": "Weapon",
+        "bullet shield": "+85",
+        "passive effect": "if (distance < 15m) {weapon_damage += 0.25 * weapon_damage}"
+    },
+    "Headshot Booster": {
+        "category": "Weapon",
+        "fire rate": "+5%",
+        "bullet shield": "+40",
+        "passive effect": "if (headshot) {weapon_damage += 45}",
+        "cooldown": "7 seconds"
+    },
+    "High-Velocity Mag": {
+        "category": "Weapon",
+        "bullet speed": "+35%",
+        "weapon damage": "+14%",
+        "bullet shield": "+50"
+    },
+    "Hollow Point Ward": {
+        "category": "Weapon",
+        "spirit shield": "+80",
+        "spirit power": "+4",
+        "passive effect": "if (health > 60%) {weapon_damage += 0.20 * weapon_damage}"
+    },
+    "Monster Rounds": {
+        "category": "Weapon",
+        "weapon damage vs non-hero units": "+35%",
+        "bullet resist vs non-hero units": "+30%",
+        "max stamina": "+50",
+        "health regen": "+1"
+    },
+    "Rapid Rounds": {
+        "category": "Weapon",
+        "fire rate": "+12%",
+        "sprint speed": "+1m/s",
+        "base stamina": "-50"
+    },
+    "Restorative Shot": {
+        "category": "Weapon",
+        "bullet resist": "+7%",
+        "weapon damage": "+8%",
+        "passive effect": "next bullet hit: if (target == hero) {health += 30} else {health += 10}",
+        "cooldown": "6 seconds"
+    },
+    "Active Reload": {
+        "category": "Weapon",
+        "weapon damage": "+10%",
+        "reload time": "-20%",
+        "sustained effect": "if (successful reload timing) {fire_rate += 0.20 * fire_rate; bullet_vampirism += 0.30 * bullet_vampirism}",
+        "cooldown": "17 seconds",
+        "duration": "8 seconds"
+    },
+    "Berserker": {
+        "category": "Weapon",
+        "magazine size": "+4",
+        "bullet damage resist": "+8%",
+        "passive effect": "if (damage > 110) {weapon_damage += 0.05 * weapon_damage; max_stacks = 10}",
+        "duration": "10 seconds"
+    },
+    "Kinetic Dash": {
+        "category": "Weapon",
+        "max stamina": "+100",
+        "stamina regeneration": "+1.5",
+        "passive effect": "if (dash) {stamina_cost = 0; fire_rate += 0.30 * fire_rate; magazine_size += 5}",
+        "cooldown": "10 seconds",
+        "duration": "8 seconds"
+    },
+    "Long Range": {
+        "category": "Weapon",
+        "magazine size": "+20%",
+        "passive effect": "if (distance >= 15m) {weapon_damage += 0.40 * weapon_damage}",
+        "top item": "Sharpshooter"
+    },
+    "Melee Charge": {
+        "category": "Weapon",
+        "passive effect": "enhances melee attacks with increased damage and range."
+    },
+    "Mystic Shot": {
+        "category": "Weapon",
+        "weapon damage": "+12%",
+        "spirit power": "+4",
+        "passive effect": "if (next bullet) {spirit_damage += 65}",
+        "cooldown": "6 seconds"
+    },
+    "Slowing Bullets": {
+        "category": "Weapon",
+        "weapon damage": "+16%",
+        "spirit power": "+5",
+        "passive effect": "if (hit) {movement_speed -= 0.25 * movement_speed}",
+        "slow duration": "1.3 seconds",
+        "top item": "Silencer"
+    },
+    "Soul Shredder Bullets": {
+        "category": "Weapon",
+        "spirit damage vampirism": "+23%",
+        "passive effect": "bullets deal additional spirit damage and reduce target's spirit damage resistance."
+    },
+    "Swift Striker": {
+        "category": "Weapon",
+        "fire rate": "+22%",
+        "bullet damage resist": "-5%"
+    },
+    "Fleetfoot": {
+        "category": "Weapon",
+        "max stamina": "+75",
+        "sliding distance": "+25%",
+        "passive effect": "no movement speed reduction while shooting.",
+        "effect": "if (cooldown end) {movement_speed += 4m/s; magazine_size += 0.30 * magazine_size}",
+        "cooldown": "22 seconds",
+        "duration": "4 seconds"
+    },
+    "Escalating Resilience": {
+        "category": "Weapon",
+        "fire rate": "+14%",
+        "weapon damage": "+14%",
+        "passive effect": "if (hit) {bullet_resist += 0.02 * bullet_resist; max_stacks = 18}",
+        "stack duration": "20 seconds"
+    },
+    "Hunter's Aura": {
+        "category": "Weapon",
+        "max stamina": "+150",
+        "passive effect": "reduces bullet resist and fire rate of nearby enemies; tripled if only 1 enemy hero nearby.",
+        "effective range": "15 meters",
+        "bullet damage resist": "-10%",
+        "reduced firing speed": "-10%"
+    },
+    "Intensifying Magazine": {
+        "category": "Weapon",
+        "magazine size": "+25%",
+        "weapon damage": "+20%",
+        "sustained effect": "continuous fire increases weapon damage up to 75%.",
+        "max damage time": "3 seconds"
+    },
+    "Point Blank": {
+        "category": "Weapon",
+        "bullet damage resist": "+15%",
+        "max stamina": "+1",
+        "passive effect": "if (distance < 15m) {weapon_damage += 0.45 * weapon_damage; target_movement_speed -= 0.25 * target_movement_speed}",
+        "slow duration": "2 seconds"
+    },
+    "Pristine Emblem": {
+        "category": "Weapon",
+        "weapon damage": "+25%",
+        "spirit power": "+12",
+        "spirit damage resist": "+12%",
+        "passive effect": "if (enemy_health > 50%) {weapon_damage += 0.25 * weapon_damage}"
+    },
+    "Sharpshooter": {
+        "category": "Weapon",
+        "magazine size": "+20%",
+        "effective range": "+15%",
+        "aiming shot screen magnification": "+35%",
+        "passive effect 1": "if (distance >= 15m) {weapon_damage += 0.60 * weapon_damage}",
+        "passive effect 2": "if (headshot) {weapon_damage += 100}",
+        "cooldown": "3 seconds"
+    },
+    "Tesla Bullets": {
+        "category": "Weapon",
+        "fire rate": "+14%",
+        "passive effect": "if (hit) {chance of chain lightning; lightning_damage = 30 spirit; transfer_damage = 60 spirit}",
+        "activation probability": "25%",
+        "transfer radius": "8 meters",
+        "max transfers": "2"
+    },
+    "Titanic Magazine": {
+        "category": "Weapon",
+        "bullet size": "+100%",
+        "weapon damage": "+18%",
+        "bullet damage resist": "+10%",
+        "required item": "Basic Magazine"
+    },
+    "Toxic Bullets": {
+        "category": "Weapon",
+        "passive effect": "bullets apply bleed; max_bleed_damage = 6% of current health/second; healing_reduction = -55%",
+        "duration": "3 seconds"
+    },
+    "Alchemical Fire": {
+        "category": "Weapon",
+        "bullet shield": "+225",
+        "weapon damage": "+14%",
+        "spirit power": "+7",
+        "use effect": "throws chemical vial, creating damaging field.",
+        "cooldown": "28 seconds",
+        "damage per second": "45 - 95 spirit",
+        "weapon damage vulnerability": "+50%",
+        "area size": "10 meters",
+        "duration": "5 seconds"
+    },
+    "Heroic Aura": {
+        "category": "Weapon",
+        "bullet damage lifesteal": "+20%",
+        "max stamina": "+150",
+        "movement speed": "+1m/s",
+        "passive effect": "nearby minions gain +40% fire rate; nearby allies gain speed and fire rate.",
+        "effective range": "20 meters for minions, 30 meters for allies",
+        "cooldown": "30 seconds",
+        "ally speed bonus": "+3m/s",
+        "ally fire rate bonus": "+25%",
+        "duration": "5 seconds"
+    },
+    "Warp Stone": {
+        "category": "Weapon",
+        "weapon damage": "+20%",
+        "spirit power": "+8",
+        "effect": "teleport forward, gain bullet damage resist.",
+        "cooldown": "15 seconds",
+        "teleport distance": "13 meters",
+        "bullet damage resist": "+40%",
+        "duration": "5 seconds"
+    },
+    "Frenzy": {
+        "category": "Weapon",
+        "magazine size": "+9",
+        "weapon damage": "+30%",
+        "max stamina": "+200",
+        "passive effect": "if (health < 40%) {movement_speed += 4m/s; fire_rate += 0.40 * fire_rate; spirit_damage_resist += 0.45 * spirit_damage_resist}"
+    },
+    "Glass Cannon": {
+        "category": "Weapon",
+        "weapon damage": "+70%",
+        "fire rate": "+10%",
+        "movement speed": "+1m/s",
+        "max health": "-15%",
+        "passive effect": "if (kill) {permanent weapon_damage += 0.10 * weapon_damage; max_stacks = 5}",
+        "stack loss on death": "1 stack"
+    },
+    "Lucky Shot": {
+        "category": "Weapon",
+        "magazine size": "+30%",
+        "passive effect": "if (hit) {chance += 0.30 * chance; weapon_damage += 0.80 * weapon_damage; target_movement_speed -= 0.30 * target_movement_speed}",
+        "slow duration": "1.5 seconds"
+    },
+    "Ricochet": {
+        "category": "Weapon",
+        "magazine size": "+35%",
+        "fire rate": "+12%",
+        "max stamina": "+150",
+        "persistent effect": "bullets ricochet to nearby enemies, dealing 50% primary damage.",
+        "ricochet targets": "2",
+        "ricochet distance": "14 meters"
+    },
+    "Siphon Bullets": {
+        "category": "Weapon",
+        "weapon damage": "+40%",
+        "passive effect": "if (hit) {steal_max_health = 45; on_kill: max_health_steal_permanent = 1 stack}",
+        "steal duration": "20 seconds",
+        "steal cooldown": "0.8 seconds"
+    },
+    "Spiritual Overflow": {
+        "category": "Weapon",
+        "fire rate": "+20%",
+        "cooldown reduction": "+15%",
+        "spirit damage vampirism": "+10%",
+        "passive effect": "continuously damaging enemies increases spirit power.",
+        "effect stack": "11.4% ~ 41% based on attack speed",
+        "spirit power bonus": "+45",
+        "duration": "18 seconds"
+    },
+    "Silencer": {
+        "category": "Weapon",
+        "slow on hit": "+25%",
+        "weapon damage": "+25%",
+        "effect": "next 4 seconds: silences target, preventing ability use.",
+        "cooldown": "34 seconds",
+        "silence duration": "2 seconds",
+        "required item": "Slowing Bullets"
+    },
+    "Vampiric Burst": {
+        "category": "Weapon",
+        "movement speed": "+2m/s",
+        "weapon damage": "+25%",
+        "max stamina": "+150",
+        "effect": "gain additional lifesteal, fire rate, magazine size.",
+        "cooldown": "35 seconds",
+        "bullet damage absorb": "+100%",
+        "fire rate bonus": "+40%",
+        "magazine size bonus": "+50%",
+        "duration": "4.5 seconds"
+    },
+    "Extra Health": {
+        "category": "Vitality",
+        "base health": "+11%",
+        "max stamina": "+160",
+        "weapon damage": "+5%"
+    },
+    "Extra Regen": {
+        "category": "Vitality",
+        "stamina regen": "+2.8",
+        "magazine size": "+8%",
+        "max stamina": "+25"
+    },
+    "Extra Stamina": {
+        "category": "Vitality",
+        "max stamina increase": "+1",
+        "stamina recovery": "+10%",
+        "fire rate": "+7%",
+        "top item": "Superior Stamina"
+    },
+    "Melee Lifesteal": {
+        "category": "Vitality",
+        "melee attack damage": "+15%",
+        "max stamina": "+75",
+        "passive effect": "if (melee hit) {heal += 0.20 * melee_damage + 90; if (non-hero) {heal *= 0.35}}",
+        "cooldown": "7 seconds",
+        "top item": "Lifestrike"
+    },
+    "Sprint Boots": {
+        "category": "Vitality",
+        "sprint speed": "+2m/s",
+        "health regen": "+1",
+        "weapon damage": "+4%",
+        "top item": "Enduring Speed"
+    },
+    "Healing Rite": {
+        "category": "Vitality",
+        "max stamina": "+45",
+        "use effect": "target gains health regen and increased sprint speed.",
+        "cooldown": "65 seconds",
+        "total recovery": "370",
+        "sprint speed bonus": "+2m/s",
+        "recovery duration": "17 seconds",
+        "casting range": "30 meters",
+        "top item": "Rescue Beam"
+    },
+    "Bullet Lifesteal": {
+        "category": "Vitality",
+        "bullet damage lifesteal": "+28%",
+        "max stamina": "+75"
+    },
+    "Combat Barrier": {
+        "category": "Vitality",
+        "bullet shield": "+300",
+        "enchantment effect": "if (bullet shield active) {weapon_damage += 0.28 * weapon_damage}"
+    },
+    "Debuff Reducer": {
+        "category": "Vitality",
+        "max stamina": "+75",
+        "weapon damage": "+6%",
+        "sustained effect": "reduces duration of debuffs.",
+        "debuff resistance": "+30%",
+        "top item": "Debuff Remover"
+    },
+    "Enchanter's Barrier": {
+        "category": "Vitality",
+        "spirit shield": "+300",
+        "sustained effect": "if (spirit shield active) {spirit_power += 20}"
+    },
+    "Enduring Speed": {
+        "category": "Vitality",
+        "required item": "Sprint Boots",
+        "movement speed": "+1.4m/s",
+        "sprint speed": "+2m/s",
+        "max stamina": "+75",
+        "stamina regen": "+1.5",
+        "sustained effect": "resistance to movement slowing effects: +40%"
+    },
+    "Healbane": {
+        "category": "Vitality",
+        "max stamina": "+75",
+        "passive effect": "if (spirit_damage) {healing received reduction: -40%; on_kill: health += 350}",
+        "recovery reduction duration": "6 seconds"
+    },
+    "Healing Booster": {
+        "category": "Vitality",
+        "bullet damage resist": "+6%",
+        "spirit damage resist": "+6%",
+        "stamina regen": "+2",
+        "sustained effect": "increases healing effect applied: +25%"
+    },
+    "Reactive Barrier": {
+        "category": "Vitality",
+        "magazine size": "+15%",
+        "max stamina": "+75",
+        "stamina regen": "+2",
+        "passive effect": "if (immobilized or stunned) {bullet_shield += 400; spirit_shield += 200}",
+        "duration": "13 seconds"
+    },
+    "Spirit Armor": {
+        "category": "Vitality",
+        "spirit damage resist": "+20%",
+        "spirit power": "+5",
+        "top item": "Improved Spirit Armor"
+    },
+    "Spirit Damage Vampire": {
+        "category": "Vitality",
+        "spirit damage vampirism": "+23%",
+        "max stamina": "+75"
+    },
+    "Divine Barrier": {
+        "category": "Vitality",
+        "bullet damage resist": "+7%",
+        "stamina regen": "+1.5",
+        "effect": "grants target bullet shield, spirit shield, increased movement speed.",
+        "cooldown": "28 seconds",
+        "bullet shield": "+300",
+        "spirit shield": "+300",
+        "movement speed bonus": "+2m/s",
+        "duration": "5 seconds",
+        "casting range": "35 meters"
+    },
+    "Healing Waves": {
+        "category": "Vitality",
+        "weapon damage": "+10%",
+        "max stamina": "+100",
+        "effect": "recovers self and nearby allies; increased by 20% per ally.",
+        "cooldown": "60 seconds",
+        "base recovery": "260",
+        "recovery duration": "2 seconds",
+        "effect radius": "18 meters"
+    },
+    "Restorative Locket": {
+        "category": "Vitality",
+        "spirit damage resist": "+10%",
+        "spirit power": "+5",
+        "passive effect": "if (enemy uses ability within 50 yards) {gain healing stack}",
+        "use effect": "heals target using all stacks; max stacks restore stamina.",
+        "cooldown": "24 seconds",
+        "recovery per stack": "40",
+        "max stack": "15"
+    },
+    "Return Fire": {
+        "category": "Vitality",
+        "max stamina": "+125",
+        "spirit power": "+7",
+        "fire rate": "+7%",
+        "effect": "if (attacked) {reflect bullet and spirit damage}",
+        "cooldown": "24 seconds",
+        "bullet damage reflection": "60%",
+        "spirit damage reflection": "30%",
+        "duration": "7 seconds"
+    },
+    "Improved Bullet Armor": {
+        "category": "Vitality",
+        "required item": "Bullet Armor",
+        "bullet damage resist": "+45%",
+        "weapon damage": "+10%"
+    },
+    "Improved Spirit Armor": {
+        "category": "Vitality",
+        "required item": "Spirit Armor",
+        "spirit damage resist": "+45%",
+        "spirit power": "+8"
+    },
+    "Lifestrike": {
+        "category": "Vitality",
+        "required item": "Melee Lifesteal",
+        "melee attack damage": "+40%",
+        "max stamina": "+125",
+        "bullet damage resist": "+8%",
+        "passive effect": "if (melee hit) {heal += 0.55 * melee_damage + 110; target_movement_speed -= 0.60 * target_movement_speed}",
+        "cooldown": "5 seconds",
+        "slow duration": "2.5 seconds"
+    },
+    "Superior Stamina": {
+        "category": "Vitality",
+        "required item": "Extra Stamina",
+        "max stamina": "+3",
+        "stamina recovery speed": "+20%",
+        "air jump/dash distance": "+40%",
+        "fire rate": "+7%",
+        "spirit power": "+8",
+        "passive effect": "increases maximum uses of aerial jumps and dashes before landing from 1 to 2"
+    },
+    "Veil Walker": {
+        "category": "Vitality",
+        "bullet shield": "+200",
+        "spirit shield": "+200",
+        "magazine size": "+12%",
+        "weapon damage": "+10%",
+        "passive effect": "if (pass through Cosmic Veil) {gain stealth; restore ammo and spirit shields; increase fire rate}",
+        "cooldown": "18 seconds",
+        "stealth speed": "+3m/s",
+        "additional fire rate": "+30%",
+        "stealth duration": "5 seconds"
+    },
+    "Debuff Remover": {
+        "category": "Vitality",
+        "required item": "Debuff Reducer",
+        "max health": "+125",
+        "weapon damage": "+20%",
+        "sustained effect": "reduces debuff duration by 35%",
+        "use effect": "cleanses all debuffs; increases movement speed if cleansed",
+        "additional movement speed": "+3m/s",
+        "duration": "3 seconds"
+    },
+    "Majestic Leap": {
+        "category": "Vitality",
+        "spirit power": "+10",
+        "max stamina": "+125",
+        "use effect": "jump into air; use again to dive. Cannot use for 5 seconds if attacked.",
+        "cooldown": "26 seconds"
+    },
+    "Metal Skin": {
+        "category": "Vitality",
+        "max stamina": "+125",
+        "spirit power": "+8",
+        "fire rate": "+8%",
+        "use effect": "become immune to all bullets and melee attacks",
+        "duration": "3.5 seconds"
+    },
+    "Rescue Beam": {
+        "category": "Vitality",
+        "required item": "Healing Rite",
+        "max stamina": "+125",
+        "sprint speed": "+2m/s",
+        "spirit power": "+9",
+        "use effect": "heal self and target for percentage of max health; pull target to self",
+        "cooldown": "25 seconds",
+        "recovery amount": "30% of max health",
+        "concentration duration": "3 seconds",
+        "casting range": "45 meters"
+    },
+    "Leech": {
+        "category": "Vitality",
+        "spirit damage vampirism": "+35%",
+        "bullet damage vampirism": "+35%",
+        "max stamina": "+175",
+        "spirit power": "+12",
+        "weapon damage": "+15%",
+        "sustained effect": "reduces healing reduction effects by 30%"
+    },
+    "Soul Rebirth": {
+        "category": "Vitality",
+        "cooldown reduction": "+15%",
+        "weapon damage": "+20%",
+        "passive effect": "upon death, resurrect at death location after 4 seconds with 50% health",
+        "cooldown": "200 seconds"
+    },
+    "Colossus": {
+        "category": "Vitality",
+        "max health": "+600",
+        "melee attack damage": "+20%",
+        "weapon damage": "+20%",
+        "use effect": "gain bullet and spirit damage resist; reduce enemy speed and dash range; increase size by 20%",
+        "cooldown": "45 seconds",
+        "bullet damage resist": "+40%",
+        "spirit damage resist": "+40%",
+        "enemy speed reduction": "-25%",
+        "effect radius": "10 meters",
+        "duration": "7 seconds"
+    },
+    "Phantom Strike": {
+        "category": "Vitality",
+        "bullet damage resist": "+15%",
+        "weapon damage": "+30%",
+        "use effect": "teleport to enemy, disarm and slow them, deal spirit damage",
+        "cooldown": "25 seconds",
+        "disarm duration": "3 seconds",
+        "slow amount": "-50%",
+        "spirit damage": "150",
+        "casting range": "30 meters"
+    },
+    "Shadow Weave": {
+        "category": "Vitality",
+        "health regen": "+15",
+        "spirit shield": "+200",
+        "magazine size": "+30%",
+        "use effect": "gain stealth; taking damage reveals you briefly",
+        "cooldown": "45 seconds",
+        "stealth duration": "25 seconds",
+        "stealth speed": "+2m/s",
+        "stealth detection range": "20 meters",
+        "surprise state": "if (attack or ability used in stealth) {fire rate += 0.40 * fire rate; spirit power += 55}",
+        "surprise duration": "8 seconds"
+    },
+    "Unstoppable": {
+        "category": "Vitality",
+        "max stamina": "+150",
+        "spirit damage resist": "+15%",
+        "movement speed": "+1m/s",
+        "spirit power": "+12",
+        "use effect": "become immune to stun, silence, sleep, binding, disarm",
+        "cooldown": "65 seconds",
+        "duration": "6 seconds"
+    },
+    "Extra Charge": {
+        "category": "Spirit",
+        "max charge": "+1",
+        "recharge ability cooldown reduction": "+8%",
+        "weapon damage": "+6%",
+        "top item": "Rapid Recharge"
+    },
+    "Extra Spirit": {
+        "category": "Spirit",
+        "spirit power": "+8",
+        "health regen": "+1",
+        "max stamina": "+25",
+        "top item": "Improved Spirit"
+    },
+    "Mystic Burst": {
+        "category": "Spirit",
+        "spirit shield": "+40",
+        "weapon damage": "+6%",
+        "sustained effect": "if (damage >= 80) {deal additional spirit damage}",
+        "cooldown": "6 seconds",
+        "additional damage": "35 spirit",
+        "top item": "Improved Burst"
+    },
+    "Mystic Reach": {
+        "category": "Spirit",
+        "ability range": "+15%",
+        "spirit damage resist": "+5%",
+        "top item": "Improved Reach"
+    },
+    "Spirit Strike": {
+        "category": "Spirit",
+        "spirit shield": "+85",
+        "health regen": "+1",
+        "melee attack damage": "+15%",
+        "passive effect": "if (melee hit) {deal additional spirit damage; reduce target's spirit resist}",
+        "cooldown": "8 seconds",
+        "additional damage": "50 spirit",
+        "spirit resist reduction": "-12%",
+        "duration": "8 seconds"
+    },
+    "Infuser": {
+        "category": "Spirit",
+        "max stamina": "+50",
+        "magazine size": "+10%",
+        "use effect": "gain spirit power and damage vampirism",
+        "cooldown": "35 seconds",
+        "spirit power bonus": "+16",
+        "spirit damage vampirism": "+20%",
+        "duration": "6 seconds"
+    },
+    "Duration Extender": {
+        "category": "Spirit",
+        "ability duration": "+16%",
+        "max stamina": "+100",
+        "stamina regen": "+1.5",
+        "top item": "Superior Duration"
+    },
+    "Improved Cooldown": {
+        "category": "Spirit",
+        "cooldown reduction": "+15%",
+        "stamina regen": "+1.5",
+        "top item": "Superior Cooldown"
+    },
+    "Mystic Vulnerability": {
+        "category": "Spirit",
+        "spirit damage resist": "+6%",
+        "passive effect": "if (spirit damage) {reduce target's spirit resist}",
+        "spirit resist reduction": "-12%",
+        "duration": "6 seconds",
+        "top item": "Escalating Exposure"
+    },
+    "Quicksilver Reload": {
+        "category": "Spirit",
+        "reload time": "+10%",
+        "passive effect": "choose one ability: deals additional spirit damage; reloads weapon, increases fire rate",
+        "additional damage": "50 spirit",
+        "fire rate increase": "+15%",
+        "effect cooldown": "12 seconds"
+    },
+    "Suppressor": {
+        "category": "Spirit",
+        "max stamina": "+50",
+        "stamina regen": "+3",
+        "spirit power": "+4",
+        "passive effect": "if (spirit damage) {reduce target's fire rate}",
+        "fire rate reduction": "-30%",
+        "duration": "2 seconds",
+        "top item": "Mystic Slow"
+    },
+    "Cold Front": {
+        "category": "Spirit",
+        "spirit damage resist": "+10%",
+        "use effect": "release ice wave, deal spirit damage, slow movement",
+        "cooldown": "32 seconds",
+        "damage": "75 spirit",
+        "movement speed reduction": "-40%",
+        "max wave radius": "14 meters",
+        "slow duration": "3 seconds"
+    },
+    "Decay": {
+        "category": "Spirit",
+        "spirit power": "+7",
+        "use effect": "reduce healing received, deal damage per second based on current health; cannot kill target",
+        "cooldown": "30 seconds",
+        "healing reduction": "-50%",
+        "damage per second": "3.1% of current health",
+        "casting range": "15 meters",
+        "duration": "10 seconds"
+    },
+    "Slowing Hex": {
+        "category": "Spirit",
+        "sprint speed": "+1m/s",
+        "spirit power": "+5",
+        "use effect": "deal spirit damage, slow movement, prevent movement abilities",
+        "cooldown": "27 seconds",
+        "damage": "70 spirit",
+        "movement slowdown": "-30%",
+        "casting range": "25 meters",
+        "duration": "3 seconds"
+    },
+    "Withering Whip": {
+        "category": "Spirit",
+        "magazine size": "+20%",
+        "spirit power": "+4",
+        "max stamina": "+50",
+        "use effect": "reduces target's fire rate and bullet damage resistance",
+        "cooldown": "40 seconds",
+        "fire rate reduction": "-40%",
+        "bullet damage resistance reduction": "-14%",
+        "casting range": "24 meters",
+        "duration": "4.5 seconds"
+    },
+    "Improved Reach": {
+        "category": "Spirit",
+        "required item": "Mystic Reach",
+        "ability range increase": "+35% for selected ability, +25% for unselected abilities",
+        "spirit damage resist": "+10%",
+        "spirit power": "+6"
+    },
+    "Improved Spirit": {
+        "category": "Spirit",
+        "required item": "Extra Spirit",
+        "spirit power": "+21",
+        "stamina regen": "+2",
+        "sprint speed": "+1m/s",
+        "max stamina": "+75",
+        "top item": "Boundless Spirit"
+    },
+    "Mystic Slow": {
+        "category": "Spirit",
+        "required item": "Suppressor",
+        "max stamina": "+100",
+        "stamina regen": "+3",
+        "spirit power": "+6",
+        "passive effect": "if (spirit damage) {reduce target's movement speed and fire rate}",
+        "movement speed reduction": "-30%",
+        "fire rate reduction": "-40%",
+        "duration": "2 seconds"
+    },
+    "Rapid Recharge": {
+        "category": "Spirit",
+        "required item": "Extra Charge",
+        "max charge": "+3",
+        "charge recovery time reduction": "+40%",
+        "cooldown reduction": "+20%"
+    },
+    "Superior Cooldown": {
+        "category": "Spirit",
+        "required item": "Improved Cooldown",
+        "cooldown reduction for selected ability": "+32%",
+        "cooldown reduction for unselected abilities": "+24%",
+        "max stamina": "+175",
+        "weapon damage": "+15%",
+        "health regen": "+4"
+    },
+    "Surge of Power": {
+        "category": "Spirit",
+        "max stamina": "+75",
+        "sustained effect": "choose one ability: gain additional spirit power; gain speed after casting ability",
+        "cooldown": "10 seconds",
+        "additional spirit power": "+28",
+        "movement speed bonus": "+3m/s",
+        "movement speed duration": "6 seconds"
+    },
+    "Torment Pulse": {
+        "category": "Spirit",
+        "max stamina": "+125",
+        "spirit power": "+6",
+        "passive effect": "periodically deal spirit damage to two nearest enemies",
+        "damage cycle": "1.5 seconds",
+        "damage": "40 spirit",
+        "wave radius": "9 meters"
+    },
+    "Ethereal Shift": {
+        "category": "Spirit",
+        "use effect": "become invincible and untargetable; exit early with jump button; gain spirit power after exit",
+        "cooldown": "30 seconds",
+        "invincible duration": "3.5 seconds",
+        "spirit power bonus": "+14",
+        "spirit power duration": "10 seconds"
+    },
+    "Knockdown": {
+        "category": "Spirit",
+        "max stamina increase": "+1",
+        "spirit shield": "+200",
+        "spirit power": "+6",
+        "use effect": "knocks down and stuns target after 3 seconds",
+        "cooldown": "45 seconds",
+        "stun duration": "1.25 seconds",
+        "casting range": "35 meters"
+    },
+    "Silence Glyph": {
+        "category": "Spirit",
+        "spirit shield": "+225",
+        "sprint speed": "+2m/s",
+        "use effect": "fires projectile to damage and silence target; reduces spirit resist",
+        "cooldown": "30 seconds",
+        "silence duration": "3.5 seconds",
+        "spirit damage": "150",
+        "spirit resist reduction": "(not specified)",
+        "casting range": "40 meters"
+    },
+    "Boundless Spirit": {
+        "category": "Spirit",
+        "required item": "Improved Spirit",
+        "spirit power": "+60",
+        "max health": "+300",
+        "health regen": "+15",
+        "sprint speed": "+4m/s"
+    },
+    "Diviner's Kevlar": {
+        "category": "Spirit",
+        "spirit damage vampirism": "+20%",
+        "cooldown reduction": "+12%",
+        "passive effect": "when casting ultimate, gain bullet shield, spirit shield, and spirit power",
+        "cooldown": "60 seconds",
+        "bullet shield": "+700",
+        "spirit shield": "+700",
+        "additional spirit power": "+40",
+        "duration": "15 seconds"
+    },
+    "Escalating Exposure": {
+        "category": "Spirit",
+        "required item": "Mystic Vulnerability",
+        "spirit damage resist": "+15%",
+        "max stamina": "+125",
+        "spirit resist reduction": "-12% on spirit damage",
+        "passive effect": "dealing spirit damage increases damage dealt to target",
+        "damage increase per stack": "+6%",
+        "stack duration": "15 seconds",
+        "stack application cycle": "0.7 seconds"
+    },
+    "Mystic Reverb": {
+        "category": "Spirit",
+        "spirit damage vampirism": "+15%",
+        "spirit damage resist": "+15%",
+        "ability range": "+15%",
+        "passive effect": "if (selected ability hits) {slow all nearby enemies; deal delayed damage}",
+        "cooldown": "6 seconds",
+        "delayed damage": "40% of ability damage",
+        "movement speed reduction": "-50%",
+        "effective range": "16 meters",
+        "echo delay": "3 seconds"
+    },
+    "Curse": {
+        "category": "Spirit",
+        "weapon damage": "+20%",
+        "spirit power": "+8",
+        "use effect": "inflicts curse to stop actions, silence, disarm, prevent item use",
+        "cooldown": "50 seconds",
+        "curse duration": "3.5 seconds",
+        "casting range": "20 meters"
+    },
+    "Echo Shard": {
+        "category": "Spirit",
+        "movement speed": "+1m/s",
+        "bullet damage resist": "+16%",
+        "use effect": "resets cooldown of last used non-ultimate ability",
+        "cooldown": "20 seconds"
+    },
+    "Magic Carpet": {
+        "category": "Spirit",
+        "ability duration": "+10%",
+        "spirit power": "+15",
+        "max stamina": "+150",
+        "use effect": "summon carpet to fly; gain bullet and spirit shields while flying",
+        "cooldown": "40 seconds",
+        "bullet shield": "+400",
+        "spirit shield": "+400",
+        "summon time": "1.3 seconds",
+        "flight duration": "7 seconds",
+        "flight speed": "+6m/s"
+    },
+    "Refresher": {
+        "category": "Spirit",
+        "spirit damage resist": "+16%",
+        "use effect": "resets all ability cooldowns; restores charge abilities to max",
+        "cooldown": "200 seconds"
+    }
+}
+        
+    
+

@@ -1,0 +1,10 @@
+**.xlsx
+**.sln
+**.vs
+**.vscode
+**.ini
+**.vcxproj
+**.user
+**/bin/
+**/bin-int/
+**/WalnutApp
