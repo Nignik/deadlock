@@ -1,0 +1,401 @@
+{
+    "Abrams": {
+        "BaseWeapon": {
+            "dps": 63,
+            "bullet damage": 4.68,
+            "ammo": 9,
+            "bullets per sec": 1.67,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 600,
+            "health regen": 1,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 6.5,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Bebop": {
+        "BaseWeapon": {
+            "dps": 66,
+            "bullet damage": 5.3,
+            "ammo": 66,
+            "bullets per sec": 12.5,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 650,
+            "health regen": 3,
+            "bullet resist": 10,
+            "spirit resist": 0,
+            "move speed": 6.2,
+            "sprint speed": 3,
+            "stamina": 3
+        }
+    },
+    "Dynamo": {
+        "BaseWeapon": {
+            "dps": 52,
+            "bullet damage": 13,
+            "ammo": 18,
+            "bullets per sec": 4,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 650,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 6.5,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Grey Talon": {
+        "BaseWeapon": {
+            "dps": 55,
+            "bullet damage": 22,
+            "ammo": 17,
+            "bullets per sec": 2.5,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 6,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Haze": {
+        "BaseWeapon": {
+            "dps": 56,
+            "bullet damage": 5.6,
+            "ammo": 25,
+            "bullets per sec": 10,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 500,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 8,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Infernus": {
+        "BaseWeapon": {
+            "dps": 66,
+            "bullet damage": 6.6,
+            "ammo": 27,
+            "bullets per sec": 10,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 625,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 6.5,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Ivy": {
+        "BaseWeapon": {
+            "dps": 64,
+            "bullet damage": 4.5,
+            "ammo": 33,
+            "bullets per sec": 14.3,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 7,
+            "sprint speed": 0,
+            "stamina": 4
+        }
+    },
+    "Kelvin": {
+        "BaseWeapon": {
+            "dps": 83,
+            "bullet damage": 21,
+            "ammo": 15,
+            "bullets per sec": 4,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 600,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 10,
+            "move speed": 6.5,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Lady Geist": {
+        "BaseWeapon": {
+            "dps": 55,
+            "bullet damage": 25,
+            "ammo": 13,
+            "bullets per sec": 2.22,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 650,
+            "health regen": 1,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 6,
+            "sprint speed": 1,
+            "stamina": 3
+        }
+    },
+    "Lash": {
+        "BaseWeapon": {
+            "dps": 61,
+            "bullet damage": 10,
+            "ammo": 29,
+            "bullets per sec": 6.12,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 15,
+            "move speed": 7,
+            "sprint speed": 1,
+            "stamina": 3
+        }
+    },
+    "Mcginnis": {
+        "BaseWeapon": {
+            "dps": 89,
+            "bullet damage": 7.15,
+            "ammo": 66,
+            "bullets per sec": 12.5,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 25,
+            "move speed": 6.5,
+            "sprint speed": 0,
+            "stamina": 2
+        }
+    },
+    "Mo & Krill": {
+        "BaseWeapon": {
+            "dps": 76,
+            "bullet damage": 3.6,
+            "ammo": 20,
+            "bullets per sec": 5.56,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 700,
+            "health regen": 3,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 7.8,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Paradox": {
+        "BaseWeapon": {
+            "dps": 57,
+            "bullet damage": 7.2,
+            "ammo": 40,
+            "bullets per sec": 7.94,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 6.5,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Pocket": {
+        "BaseWeapon": {
+            "dps": 70,
+            "bullet damage": 5,
+            "ammo": 11,
+            "bullets per sec": 2,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": -15,
+            "move speed": 7,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Seven": {
+        "BaseWeapon": {
+            "dps": 70,
+            "bullet damage": 11.5,
+            "ammo": 29,
+            "bullets per sec": 6.12,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 1.5,
+            "bullet resist": 8,
+            "spirit resist": 0,
+            "move speed": 7,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Shiv": {
+        "BaseWeapon": {
+            "dps": 60,
+            "bullet damage": 5.7,
+            "ammo": 10,
+            "bullets per sec": 1.9,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 600,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 7,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Vindicta": {
+        "BaseWeapon": {
+            "dps": 73,
+            "bullet damage": 14,
+            "ammo": 22,
+            "bullets per sec": 5.26,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": -10,
+            "spirit resist": 0,
+            "move speed": 8,
+            "sprint speed": 0,
+            "stamina": 2
+        }
+    },
+    "Viscous": {
+        "BaseWeapon": {
+            "dps": 70,
+            "bullet damage": 14,
+            "ammo": 20,
+            "bullets per sec": 5,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 7,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Warden": {
+        "BaseWeapon": {
+            "dps": 79,
+            "bullet damage": 19.8,
+            "ammo": 17,
+            "bullets per sec": 4,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 6,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Wraith": {
+        "BaseWeapon": {
+            "dps": 61,
+            "bullet damage": 5.5,
+            "ammo": 52,
+            "bullets per sec": 11.1,
+            "light melee": 63,
+            "heavy melee": 116
+        },
+        "BaseVitality": {
+            "max health": 550,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 7,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    },
+    "Yamato": {
+        "BaseWeapon": {
+            "dps": 70,
+            "bullet damage": 5.65,
+            "ammo": 12,
+            "bullets per sec": 2.5,
+            "light melee": 69,
+            "heavy melee": 128
+        },
+        "BaseVitality": {
+            "max health": 500,
+            "health regen": 2,
+            "bullet resist": 0,
+            "spirit resist": 0,
+            "move speed": 8,
+            "sprint speed": 0,
+            "stamina": 3
+        }
+    }
+}

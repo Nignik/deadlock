@@ -3,31 +3,16 @@
 #include <Walnut/Application.h>
 #include <Walnut/UI/UI.h>
 
+#include "DataLoader.h"
 #include "Data.h"
+#include "Decode.h"
 
 MainLayer::MainLayer()
 {
-	// TODO: abstract the json loading from this class
-	std::ifstream itemsFile("../../items.json");
-	if (!itemsFile.is_open())
-	{
-		std::cerr << "Unable to open file\n";
-		return;
-	}
+	m_Items = DataLoader::GetInstance().LoadItemsData();
+	m_Heroes = DataLoader::GetInstance().LoadHeroesData();
 
-	json itemsData;
-	itemsFile >> itemsData;
-	itemsFile.close();
-	
-	for (auto& [itemName, itemData] : itemsData.items())
-	{
-		m_Items.emplace_back(std::string(itemName), itemData);
-	}
-
-	for (auto& name : deadlock::statNames)
-	{
-		m_Stats[name] = 1.0f;
-	}
+	UpdateStats();
 }
 
 void MainLayer::OnUIRender()
@@ -35,6 +20,7 @@ void MainLayer::OnUIRender()
 	RenderItemsList();
 	RenderStatsTable();
 	RenderBoughtItems();
+	RenderHeroes();
 }
 
 void MainLayer::RenderItemsList()
@@ -46,13 +32,14 @@ void MainLayer::RenderItemsList()
 
 	static unsigned int currentItem = 0;
 
+	ImGui::PushStyleColor(ImGuiCol_Header, ImVec4(0, 0, 0, 0));
+
 	if (ImGui::BeginListBox(" ", size))
 	{
 		for (int i = 0; i < m_Items.size(); i++)
 		{
 			const bool isSelected = (currentItem == i);
 
-			// TODO: Make a function that takes in a functior reference and wraps it around set color and pop color
 			SetTextColor(m_Items[i].category);
 			if (ImGui::Selectable(m_Items[i].name.c_str(), isSelected))
 			{
@@ -72,6 +59,8 @@ void MainLayer::RenderItemsList()
 		}
 		ImGui::EndListBox();
 	}
+
+	ImGui::PopStyleColor();
 
 	ImGui::End();
 }
@@ -104,6 +93,34 @@ void MainLayer::RenderStatsTable()
 	ImGui::End();
 }
 
+void MainLayer::RenderPassives()
+{
+	ImVec2 size(500, 700);
+
+	ImGui::SetNextWindowDockID(ImGui::GetID("DockDown"), ImGuiCond_FirstUseEver);
+	ImGui::Begin("Passives");
+
+	if (ImGui::BeginTable("Stats", 2, ImGuiTableFlags_Borders | ImGuiTableFlags_RowBg))
+	{
+		ImGui::TableSetupColumn("Stat", ImGuiTableColumnFlags_WidthFixed, 500);
+		ImGui::TableSetupColumn("Value", ImGuiTableColumnFlags_WidthFixed, 100);
+		ImGui::TableHeadersRow();
+
+		for (const auto& [statName, statValue] : m_Stats)
+		{
+			ImGui::TableNextRow();
+			ImGui::TableNextColumn();
+			ImGui::Text("%s", statName.c_str());
+			ImGui::TableNextColumn();
+			ImGui::Text("%.3f", statValue);
+		}
+
+		ImGui::EndTable();
+	}
+
+	ImGui::End();
+}
+
 void MainLayer::RenderBoughtItems()
 {
 	ImVec2 size(400, 300);
@@ -112,6 +129,8 @@ void MainLayer::RenderBoughtItems()
 	ImGui::Begin("Bought Items");
 
 	static unsigned int currentBoughtItem = 0;
+
+	ImGui::PushStyleColor(ImGuiCol_Header, ImVec4(0, 0, 0, 0));
 	
 	std::vector<Item> itemsToSell;
 	if (ImGui::BeginListBox(" ", size))
@@ -142,12 +161,50 @@ void MainLayer::RenderBoughtItems()
 		}
 		ImGui::EndListBox();
 	}
+
+	ImGui::PopStyleColor();
+
 	ImGui::End();
 
 	for (auto& itemToSell : itemsToSell)
 	{
 		SellItem(itemToSell);
 	}
+}
+
+void MainLayer::RenderHeroes()
+{
+	ImVec2 size(400, 700);
+
+	ImGui::SetNextWindowDockID(ImGui::GetID("DockDown"), ImGuiCond_FirstUseEver);
+	ImGui::Begin("Heroes");
+
+	static unsigned int currentHero = 0;
+
+	if (ImGui::BeginListBox(" ", size))
+	{
+		for (int i = 0; i < m_Heroes.size(); i++)
+		{
+			const bool isSelected = (currentHero == i);
+
+			if (ImGui::Selectable(m_Heroes[i].name.c_str(), isSelected))
+			{
+				if (currentHero != i)
+				{
+					SetHero(m_Heroes[currentHero]);
+				}
+				currentHero = i;
+			}
+
+			if (isSelected)
+			{
+				ImGui::SetItemDefaultFocus();
+			}
+		}
+		ImGui::EndListBox();
+	}
+
+	ImGui::End();
 }
 
 void MainLayer::SetTextColor(Category itemCategory)
@@ -176,11 +233,18 @@ void MainLayer::SetTextColor(Category itemCategory)
 	ImGui::PushStyleColor(ImGuiCol_Text, color);
 }
 
-void MainLayer::UpdateStats(Item& itemName)
+void MainLayer::SetHero(Hero& hero)
 {
-	for (auto& [statName, statValue] : m_Stats)
+	m_SelectedHero = hero;
+	UpdateStats();
+}
+
+void MainLayer::UpdateStats()
+{
+	m_Stats.clear();
+	for (auto& [statName, statValue] : m_SelectedHero.baseStats)
 	{
-		statValue = 1.0f;
+		m_Stats[statName] = statValue;
 	}
 
 	for (auto& item : m_BoughtItems)
@@ -194,39 +258,18 @@ void MainLayer::UpdateStats(Item& itemName)
 
 void MainLayer::UpdateStatValue(std::string statName, std::string statUpdate)
 {
-	// TODO: abstract the string deserialization to some other function
-	if (statUpdate[0] != '+' && statUpdate[0] != '-')
-		return;
-
-	int sign = statUpdate[0] == '+' ? 1 : -1;
-
-	std::string numberPart = statUpdate.substr(1);
-
-	if (numberPart.back() == '%')
-	{
-		numberPart.pop_back();
-		float multiplier = std::stof(numberPart) / 100.0f;
-
-		m_Stats[statName] += sign * m_Stats[statName] * multiplier;
-	}
-	else
-	{
-		float increase = std::stof(numberPart);
-		
-		m_Stats[statName] += sign * increase;
-	}
-	
+	m_Stats[statName] += decode::decodeStatBoost(statUpdate, m_Stats[statName]);
 }
 
 void MainLayer::BuyItem(Item& item)
 {
 	m_BoughtItems.insert(item);
-	UpdateStats(item);
+	UpdateStats();
 }
 
-void MainLayer::SellItem(Item& itemName)
+void MainLayer::SellItem(Item& item)
 {
-	m_BoughtItems.erase(itemName);
-	UpdateStats(itemName);
+	m_BoughtItems.erase(item);
+	UpdateStats();
 }
 

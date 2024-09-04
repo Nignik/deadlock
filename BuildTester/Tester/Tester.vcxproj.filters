@@ -7,6 +7,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Data.h" />
+    <ClInclude Include="src\DataLoader.h" />
+    <ClInclude Include="src\Decode.h" />
+    <ClInclude Include="src\Hero.h" />
     <ClInclude Include="src\Item.h" />
     <ClInclude Include="src\MainLayer.h" />
     <ClInclude Include="src\json\json.h">
@@ -15,6 +18,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\DataLoader.cpp" />
+    <ClCompile Include="src\Hero.cpp" />
     <ClCompile Include="src\Item.cpp" />
     <ClCompile Include="src\MainLayer.cpp" />
   </ItemGroup>
